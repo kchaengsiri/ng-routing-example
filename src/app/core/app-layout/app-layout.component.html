@@ -1,0 +1,23 @@
+<div class="page-header">
+  <div class="title">header</div>
+</div>
+
+<div class="page-body">
+  <div class="sidebar">
+    <ul class="navigation">
+      <li class="nav-item" *ngFor="let item of menus">
+        <a class="nav-link" [routerLink]="item.url" routerLinkActive="active">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div class="page-footer">
+  footer
+</div>

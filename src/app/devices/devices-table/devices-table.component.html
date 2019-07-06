@@ -1,0 +1,23 @@
+<h2>
+  Devices
+</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let device of devices">
+      <td>{{ device.id }}</td>
+      <td>{{ device.name }}</td>
+      <td>
+        <button type="button" [routerLink]="['/devices', device.id]">Detail</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

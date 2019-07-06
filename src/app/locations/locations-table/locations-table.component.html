@@ -1,0 +1,23 @@
+<h2>
+  Locations
+</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let location of locations">
+      <td>{{ location.id }}</td>
+      <td>{{ location.name }}</td>
+      <td>
+        <button type="button" [routerLink]="['/locations', location.id]">Detail</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
